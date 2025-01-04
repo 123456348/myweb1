@@ -1,0 +1,660 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --warm-color: #f39c12;
+    --dark-bg: #1a1a1a;
+    --dark-accent: #2d2d2d;
+    --text-light: #ffffff;
+    --text-gray: #9e9e9e;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('myweb1/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    text-align: center;
+    padding: 3.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.basic-info {
+    position: relative;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.info-item {
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.info-item:hover {
+    transform: scale(1.05);
+}
+
+.info-edit {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: none;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px;
+}
+
+.info-edit form {
+    display: grid;
+    gap: 1rem;
+}
+
+.info-edit input {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.content-area {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 2rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.study-area {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 100%;
+    min-height: 220px;
+}
+
+.projects {
+    background: var(--primary-color);
+    padding: 3rem;
+    border-radius: 15px;
+    color: white;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.projects h3 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.project-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+.project-item input,
+.project-item textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+}
+
+.project-item textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.daily-study {
+    background: var(--warm-color);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.daily-study h3 {
+    margin-top: 0;
+    color: white;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 1rem;
+}
+
+.side-content {
+    display: none;
+}
+
+.rest-area {
+    background: #f8b195;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 100%;
+    min-height: 120px;
+    margin-top: 0;
+}
+
+.contact-section {
+    background: linear-gradient(to bottom, #ffffff, #2c3e50);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    min-height: 120px;
+}
+
+.contact-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.email-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.email-form textarea {
+    width: 100%;
+    min-height: 120px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 1rem;
+    color: var(--text-light);
+    resize: vertical;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+.email-form button {
+    width: 100%;
+    padding: 1rem;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.email-form button:hover {
+    background: #c0392b;
+}
+
+.entertainment-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0.8rem 0;
+}
+
+.entertainment-links a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-gray);
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+}
+
+.entertainment-links img {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    margin-bottom: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.entertainment-links a:hover {
+    color: var(--text-light);
+}
+
+.entertainment-links a:hover img {
+    transform: scale(1.1);
+}
+
+.study-links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.study-links img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.study-links img:hover {
+    transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.code-share {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 10px;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.code-container {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 2rem;
+}
+
+.code-header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.code-header select {
+    flex: 1;
+    padding: 0.8rem;
+    border-radius: 4px;
+    background: white;
+    color: var(--primary-color);
+    border: 1px solid #ddd;
+}
+
+.code-header button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#shareCode {
+    background: var(--accent-color);
+    color: white;
+}
+
+#viewHistory {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.code-editor {
+    width: 100%;
+    min-height: 120px;
+}
+
+.code-editor textarea {
+    width: 100%;
+    min-height: 120px;
+    background: white;
+    color: var(--primary-color);
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1rem;
+    font-family: 'Consolas', monospace;
+    resize: vertical;
+}
+
+.shared-codes {
+    margin-top: 1rem;
+}
+
+.code-block {
+    background: white;
+    color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.comments-section {
+    background: #f5f5f5;
+    padding: 0;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e0e0e0;
+}
+
+.comments-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.comment-form input,
+.comment-form textarea {
+    background: white;
+    border: 1px solid #ddd;
+    color: var(--primary-color);
+    padding: 0.8rem;
+    border-radius: 6px;
+}
+
+.comment-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.comment-form button {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.comment {
+    background: white;
+    color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.edit-button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    z-index: 2;
+}
+
+.edit-button:hover {
+    background: #c0392b;
+}
+
+.close-button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: none;
+    border: none;
+    color: var(--text-gray);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: var(--accent-color);
+}
+
+.show {
+    display: block;
+}
+
+.code-history {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--dark-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 1001;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.code-history.show {
+    display: block;
+}
+
+#viewHistory {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#viewHistory:hover {
+    background: #2980b9;
+}
+
+.code-history .code-block {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.code-history .code-block textarea {
+    width: 100%;
+    min-height: 150px;
+    background: var(--dark-accent);
+    color: var(--text-light);
+    border: 1px solid var(--text-gray);
+    border-radius: 6px;
+    padding: 1rem;
+    font-family: 'Consolas', monospace;
+    resize: vertical;
+    margin-top: 1rem;
+}
+
+.code-history .code-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.code-history .code-actions button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.code-history .update-code {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.code-history .delete-code {
+    background: var(--accent-color);
+    color: white;
+}
+
+.code-history .close-history {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* 修改代码显示区域的样式 */
+.code-block textarea.code-content {
+    width: 100%;
+    min-height: 120px;
+    background: var(--dark-accent);
+    color: var(--text-light);
+    border: 1px solid var(--text-gray);
+    border-radius: 6px;
+    padding: 1rem;
+    font-family: 'Consolas', monospace;
+    resize: vertical;
+    margin-top: 0.5rem;
+}
+
+/* 添加遮罩层样式 */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: none;
+}
+
+.overlay.show {
+    display: block;
+}
+
+/* 为所有文字添加悬停效果 */
+h1, h2, h3, h4, h5, h6, p, span, a, textarea, input, button, .content {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+    transform: scale(1.05);
+}
+
+/* 文本内容悬停效果 */
+p:hover, span:hover, a:hover, .content:hover {
+    transform: scale(1.05);
+}
+
+/* 调整代码分享区域的悬停效果 */
+.code-share h3:hover,
+.comments-section h3:hover {
+    transform: scale(1.05);
+    color: var(--accent-color);
+}
+
+/* 评论内容悬停效果 */
+.comment-content:hover {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* 代码块标题悬停效果 */
+.code-header span:hover {
+    transform: scale(1.05);
+    color: var(--accent-color);
+}
+
+/* 邮箱发送区域标题悬停效果 */
+.contact-section h3:hover {
+    transform: scale(1.05);
+    color: var(--accent-color);
+}
+
+/* 休闲区链接文字悬停效果 */
+.entertainment-links span:hover {
+    transform: scale(1.1);
+    color: var(--primary-color);
+}
+
+/* 项目内容悬停效果 */
+.project-item:hover > * {
+    transform: scale(1.02);
+}
+
+/* 确保表单输入框在输入时不会有缩放效果 */
+input:focus, textarea:focus {
+    transform: none;
+}
+
+/* 按钮悬停效果优化 */
+button:hover {
+    transform: scale(1.05);
+}
+
+/* 确保编辑表单中的内容在悬停时不会有太大变化 */
+.info-edit input:hover,
+.info-edit textarea:hover {
+    transform: scale(1.02);
+}
+
+/* 代码编辑器内容悬停效果 */
+.code-editor textarea:hover {
+    transform: scale(1.01);
+}
+
+/* 评论表单悬停效果 */
+.comment-form input:hover,
+.comment-form textarea:hover {
+    transform: scale(1.02);
+} 
