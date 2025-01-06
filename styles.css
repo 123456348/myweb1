@@ -13,7 +13,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-image: url('myweb1/background.jpg');
+    background-image: url('./background.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -552,7 +552,7 @@ header h1 {
     cursor: pointer;
 }
 
-/* ĞŞ¸Ä´úÂëÏÔÊ¾ÇøÓòµÄÑùÊ½ */
+/* ä¿®æ”¹ä»£ç æ˜¾ç¤ºåŒºåŸŸçš„æ ·å¼ */
 .code-block textarea.code-content {
     width: 100%;
     min-height: 120px;
@@ -566,7 +566,7 @@ header h1 {
     margin-top: 0.5rem;
 }
 
-/* Ìí¼ÓÕÚÕÖ²ãÑùÊ½ */
+/* æ·»åŠ é®ç½©å±‚æ ·å¼ */
 .overlay {
     position: fixed;
     top: 0;
@@ -582,7 +582,7 @@ header h1 {
     display: block;
 }
 
-/* ÎªËùÓĞÎÄ×ÖÌí¼ÓĞüÍ£Ğ§¹û */
+/* ä¸ºæ‰€æœ‰æ–‡å­—æ·»åŠ æ‚¬åœæ•ˆæœ */
 h1, h2, h3, h4, h5, h6, p, span, a, textarea, input, button, .content {
     transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -591,69 +591,69 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
     transform: scale(1.05);
 }
 
-/* ÎÄ±¾ÄÚÈİĞüÍ£Ğ§¹û */
+/* æ–‡æœ¬å†…å®¹æ‚¬åœæ•ˆæœ */
 p:hover, span:hover, a:hover, .content:hover {
     transform: scale(1.05);
 }
 
-/* µ÷Õû´úÂë·ÖÏíÇøÓòµÄĞüÍ£Ğ§¹û */
+/* è°ƒæ•´ä»£ç åˆ†äº«åŒºåŸŸçš„æ‚¬åœæ•ˆæœ */
 .code-share h3:hover,
 .comments-section h3:hover {
     transform: scale(1.05);
     color: var(--accent-color);
 }
 
-/* ÆÀÂÛÄÚÈİĞüÍ£Ğ§¹û */
+/* è¯„è®ºå†…å®¹æ‚¬åœæ•ˆæœ */
 .comment-content:hover {
     transform: scale(1.02);
     background: rgba(255, 255, 255, 0.95);
 }
 
-/* ´úÂë¿é±êÌâĞüÍ£Ğ§¹û */
+/* ä»£ç å—æ ‡é¢˜æ‚¬åœæ•ˆæœ */
 .code-header span:hover {
     transform: scale(1.05);
     color: var(--accent-color);
 }
 
-/* ÓÊÏä·¢ËÍÇøÓò±êÌâĞüÍ£Ğ§¹û */
+/* é‚®ç®±å‘é€åŒºåŸŸæ ‡é¢˜æ‚¬åœæ•ˆæœ */
 .contact-section h3:hover {
     transform: scale(1.05);
     color: var(--accent-color);
 }
 
-/* ĞİÏĞÇøÁ´½ÓÎÄ×ÖĞüÍ£Ğ§¹û */
+/* ä¼‘é—²åŒºé“¾æ¥æ–‡å­—æ‚¬åœæ•ˆæœ */
 .entertainment-links span:hover {
     transform: scale(1.1);
     color: var(--primary-color);
 }
 
-/* ÏîÄ¿ÄÚÈİĞüÍ£Ğ§¹û */
+/* é¡¹ç›®å†…å®¹æ‚¬åœæ•ˆæœ */
 .project-item:hover > * {
     transform: scale(1.02);
 }
 
-/* È·±£±íµ¥ÊäÈë¿òÔÚÊäÈëÊ±²»»áÓĞËõ·ÅĞ§¹û */
+/* ç¡®ä¿è¡¨å•è¾“å…¥æ¡†åœ¨è¾“å…¥æ—¶ä¸ä¼šæœ‰ç¼©æ”¾æ•ˆæœ */
 input:focus, textarea:focus {
     transform: none;
 }
 
-/* °´Å¥ĞüÍ£Ğ§¹ûÓÅ»¯ */
+/* æŒ‰é’®æ‚¬åœæ•ˆæœä¼˜åŒ– */
 button:hover {
     transform: scale(1.05);
 }
 
-/* È·±£±à¼­±íµ¥ÖĞµÄÄÚÈİÔÚĞüÍ£Ê±²»»áÓĞÌ«´ó±ä»¯ */
+/* ç¡®ä¿ç¼–è¾‘è¡¨å•ä¸­çš„å†…å®¹åœ¨æ‚¬åœæ—¶ä¸ä¼šæœ‰å¤ªå¤§å˜åŒ– */
 .info-edit input:hover,
 .info-edit textarea:hover {
     transform: scale(1.02);
 }
 
-/* ´úÂë±à¼­Æ÷ÄÚÈİĞüÍ£Ğ§¹û */
+/* ä»£ç ç¼–è¾‘å™¨å†…å®¹æ‚¬åœæ•ˆæœ */
 .code-editor textarea:hover {
     transform: scale(1.01);
 }
 
-/* ÆÀÂÛ±íµ¥ĞüÍ£Ğ§¹û */
+/* è¯„è®ºè¡¨å•æ‚¬åœæ•ˆæœ */
 .comment-form input:hover,
 .comment-form textarea:hover {
     transform: scale(1.02);
